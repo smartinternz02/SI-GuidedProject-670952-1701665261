@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startup Parameters</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://www.freepik.com/free-vector/startup-background-design_940382.htm#fromView=search&page=1&position=0&uuid=9e892fd3-585c-4ed7-992b-ae44b4223366') no-repeat center center fixed; 
+      background-size: cover;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .btn-predict {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .btn-predict:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>ENTER STARTUP PARAMETERS</h2>
+    <form action="/predict" method="post">
+      <div class="form-group">
+        <label for="ageFirstFunding">Age at First Funding Year:</label>
+        <input type="number" id="ageFirstFunding" name="ageFirstFunding">
+      </div>
+      <div class="form-group">
+        <label for="ageLastFunding">Age at Last Funding Year:</label>
+        <input type="number" id="ageLastFunding" name="ageLastFunding">
+      </div>
+      <div class="form-group">
+        <label for="ageFirstMilestone">Age at First Milestone Year:</label>
+        <input type="number" id="ageFirstMilestone" name="ageFirstMilestone">
+      </div>
+      <div class="form-group">
+        <label for="ageLastMilestone">Age at Last Milestone Year:</label>
+        <input type="number" id="ageLastMilestone" name="ageLastMilestone">
+      </div>
+      <div class="form-group">
+        <label for="numRelationship">Number of Relationships:</label>
+        <input type="number" id="numRelationship" name="numRelationship">
+      </div>
+      <div class="form-group">
+        <label for="numFundingRounds">Number of Funding Rounds:</label>
+        <input type="number" id="numFundingRounds" name="numFundingRounds">
+      </div>
+      <div class="form-group">
+        <label for="totalFunding">Total Funding (in USD):</label>
+        <input type="number" id="totalFunding" name="totalFunding">
+      </div>
+      <div class="form-group">
+        <label for="numMilestones">Number of Milestones:</label>
+        <input type="number" id="numMilestones" name="numMilestones">
+      </div>
+      <div class="form-group">
+        <label for="numParticipants">Number of Participants:</label>
+        <input type="number" id="numParticipants" name="numParticipants">
+      </div>
+      <button type="submit" class="btn-predict">Predict</button>
+    </form>
+  </div>
+</body>
+</html>
